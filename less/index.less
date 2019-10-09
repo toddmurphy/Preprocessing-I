@@ -183,6 +183,11 @@ body {
   .default-size();
 }
 
+// Global background light grey
+.backround-grey() {
+  background: #e9ecef;
+}
+
 // Gloabl Font Sizes
 h1 {
   .extra-large-header();
@@ -263,12 +268,88 @@ header {
 // SKILLS CONTENT SECTION STYLES
 .skills-content {
   border: 2px solid red;
-}
+  display: flex;
+
+  div {
+    border: 2px solid blue;
+    padding: 2% 2%;
+    margin: 5% 5%;
+    border-radius: 5px;
+    .backround-grey();
+  } //This closes the section div
+
+  h3 {
+    padding: 2% 0;
+  } //This closes the skills h3 tag
+
+  p {
+    border: 2px solid green;
+  }
+} //This closes the skills content
 
 // WORK CONTENT SECTION STYLES
+.work-content {
+  border: 2px solid gold;
+  display: flex;
+
+  div {
+    border: 1px solid blue;
+    width: 40%;
+    padding: 5% 5%;
+  } //This closes the work content div
+
+  h4 {
+    margin-bottom: 5%;
+  } //This closes the work content h4
+
+  p {
+    padding: 2%;
+  } //This closes the work content p
+} //This closes the work content section
 
 // EDUCATION CONTENT SECTION STYLES
+.education-content {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+
+  div {
+    border: 1px solid gold;
+  } //This closes the div
+
+  h4 {
+    padding: 6% 2%;
+  } //This closes the h4
+} //This closes the education content
 
 // CONTACT CONTENT SECTION STYLES
+.contact-content {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 5%;
+
+  div {
+    border: 1px solid yellow;
+    padding: 2%;
+  } //This closes the div
+
+  h3 {
+    padding: 2%;
+  } //This closes the h3
+
+  p {
+    margin: 5% 5%;
+  } //This closes the p
+} //This closes the contact content
 
 // FOOTER SECTION STYLES
+footer {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+} //This closes the footer
