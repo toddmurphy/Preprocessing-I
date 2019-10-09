@@ -139,6 +139,7 @@ html {
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.2;
   border: 2px solid blue;
 }
 h1 {
@@ -180,4 +181,24 @@ header nav {
 header a {
   text-decoration: none;
   margin: 0 5%;
+}
+.hero-content {
+  border: 2px solid green;
+  display: flex;
+}
+.hero-content div {
+  width: 50%;
+  padding: 5%;
+}
+.hero-content img {
+  border-radius: 50%;
+}
+.hero-content h1 {
+  padding: 5% 0;
+}
+.hero-content h3 {
+  padding: 5% 0;
+}
+.hero-content h4 {
+  padding: 5% 0;
 }
