@@ -172,6 +172,17 @@ body {
   font-size: 1.6rem; /*16px*/
 }
 
+.default-button() {
+  width: 200px;
+  height: 50px;
+  background: salmon;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 0 2%;
+  .default-size();
+}
+
 // Gloabl Font Sizes
 h1 {
   .extra-large-header();
@@ -195,6 +206,10 @@ p {
 
 a {
   .default-size();
+}
+
+button {
+  .default-button();
 }
 
 // HEADER SECTION STYLES
@@ -225,26 +240,30 @@ header {
   div {
     width: 50%;
     padding: 5%;
-  }
+  } //This closes div
 
   img {
     border-radius: 50%;
-  }
+  } //This closes img
 
   h1 {
     padding: 5% 0;
-  }
+  } //This closes h1
 
   h3 {
     padding: 5% 0;
-  }
+  } //This closes h3
 
   h4 {
     padding: 5% 0;
+    margin-bottom: 5%;
   }
 } // This closes the hero content
 
 // SKILLS CONTENT SECTION STYLES
+.skills-content {
+  border: 2px solid red;
+}
 
 // WORK CONTENT SECTION STYLES
 

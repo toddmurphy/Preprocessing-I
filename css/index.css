@@ -166,6 +166,17 @@ a {
   font-size: 1.6rem;
   /*16px*/
 }
+button {
+  width: 200px;
+  height: 50px;
+  background: salmon;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 0 2%;
+  font-size: 1.6rem;
+  /*16px*/
+}
 header {
   border: 2px solid red;
   display: flex;
@@ -201,4 +212,8 @@ header a {
 }
 .hero-content h4 {
   padding: 5% 0;
+  margin-bottom: 5%;
+}
+.skills-content {
+  border: 2px solid red;
 }
