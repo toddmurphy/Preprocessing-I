@@ -228,16 +228,37 @@ header {
   justify-content: flex-end;
   padding: 2% 0;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  } //this closes the header 500px media
+
   nav {
     border: 1px solid gold;
-    width: 48%;
-    padding: 0px 3%;
-    margin: 0 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    } //This closes media nav
   } //This closes the nav
 
   a {
     text-decoration: none;
     margin: 0 5%;
+
+    @media (max-width: 500px) {
+      border: 1px solid red;
+      padding: 5% 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      width: 100%;
+    } //This close media anchor
   } // This closes the links
 } //This closes the header
 
@@ -246,9 +267,19 @@ header {
   border: 2px solid green;
   display: flex;
 
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  } //This closes hero content
+
   div {
     width: 50%;
     padding: 5%;
+
+    @media (max-width: 500px) {
+      border: 1px solid gold;
+      width: 100%;
+    } //This closes media div
   } //This closes div
 
   img {
@@ -266,13 +297,18 @@ header {
   h4 {
     padding: 5% 0;
     margin-bottom: 5%;
-  }
+  } //This closes h4
 } // This closes the hero content
 
 // SKILLS CONTENT SECTION STYLES
 .skills-content {
   border: 2px solid red;
   display: flex;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  } //This closes skill content
 
   div {
     border: 2px solid blue;
@@ -297,10 +333,23 @@ header {
   border: 2px solid gold;
   display: flex;
 
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  } //This closes the work content
+
   div {
     border: 1px solid blue;
     width: 40%;
     padding: 5% 5%;
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+    } //This closes div
   } //This closes the work content div
 
   h4 {

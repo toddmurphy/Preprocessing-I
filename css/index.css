@@ -183,23 +183,59 @@ header {
   justify-content: flex-end;
   padding: 2% 0;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 header nav {
   border: 1px solid gold;
-  width: 48%;
-  padding: 0px 3%;
-  margin: 0 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+  }
 }
 header a {
   text-decoration: none;
   margin: 0 5%;
 }
+@media (max-width: 500px) {
+  header a {
+    border: 1px solid red;
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100%;
+  }
+}
 .hero-content {
   border: 2px solid green;
   display: flex;
 }
+@media (max-width: 500px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .hero-content div {
   width: 50%;
   padding: 5%;
+}
+@media (max-width: 500px) {
+  .hero-content div {
+    border: 1px solid gold;
+    width: 100%;
+  }
 }
 .hero-content img {
   border-radius: 50%;
@@ -217,6 +253,12 @@ header a {
 .skills-content {
   border: 2px solid red;
   display: flex;
+}
+@media (max-width: 500px) {
+  .skills-content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .skills-content div {
   border: 2px solid blue;
@@ -236,10 +278,25 @@ header a {
   border: 2px solid gold;
   display: flex;
 }
+@media (max-width: 500px) {
+  .work-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .work-content div {
   border: 1px solid blue;
   width: 40%;
   padding: 5% 5%;
+}
+@media (max-width: 500px) {
+  .work-content div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
 }
 .work-content h4 {
   margin-bottom: 5%;
