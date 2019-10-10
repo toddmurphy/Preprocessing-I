@@ -140,7 +140,6 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   line-height: 1.2;
-  border: 2px solid blue;
 }
 h1 {
   font-size: 4.8rem;
@@ -178,7 +177,6 @@ button {
   /*16px*/
 }
 header {
-  border: 2px solid red;
   display: flex;
   justify-content: flex-end;
   padding: 2% 0;
@@ -190,7 +188,6 @@ header {
   }
 }
 header nav {
-  border: 1px solid gold;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -207,7 +204,6 @@ header a {
 }
 @media (max-width: 500px) {
   header a {
-    border: 1px solid red;
     padding: 5% 0;
     display: flex;
     align-items: center;
@@ -218,7 +214,6 @@ header a {
   }
 }
 .hero-content {
-  border: 2px solid green;
   display: flex;
 }
 @media (max-width: 500px) {
@@ -233,12 +228,17 @@ header a {
 }
 @media (max-width: 500px) {
   .hero-content div {
-    border: 1px solid gold;
     width: 100%;
   }
 }
 .hero-content img {
   border-radius: 50%;
+}
+.hero-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 .hero-content h1 {
   padding: 5% 0;
@@ -251,7 +251,6 @@ header a {
   margin-bottom: 5%;
 }
 .skills-content {
-  border: 2px solid red;
   display: flex;
 }
 @media (max-width: 500px) {
@@ -261,7 +260,6 @@ header a {
   }
 }
 .skills-content div {
-  border: 2px solid blue;
   padding: 2% 2%;
   margin: 5% 5%;
   border-radius: 5px;
@@ -271,11 +269,7 @@ header a {
 .skills-content h3 {
   padding: 2% 0;
 }
-.skills-content p {
-  border: 2px solid green;
-}
 .work-content {
-  border: 2px solid gold;
   display: flex;
 }
 @media (max-width: 500px) {
@@ -286,7 +280,6 @@ header a {
   }
 }
 .work-content div {
-  border: 1px solid blue;
   width: 40%;
   padding: 5% 5%;
 }
@@ -296,6 +289,8 @@ header a {
     flex-direction: column;
     width: 80%;
     margin: auto;
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
   }
 }
 .work-content h4 {
@@ -305,19 +300,20 @@ header a {
   padding: 2%;
 }
 .education-content {
-  border: 2px solid red;
   display: flex;
   justify-content: space-around;
   padding: 5%;
 }
-.education-content div {
-  border: 1px solid gold;
+@media (max-width: 500px) {
+  .education-content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .education-content h4 {
   padding: 6% 2%;
 }
 .contact-content {
-  border: 2px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -325,7 +321,6 @@ header a {
   padding: 5% 5%;
 }
 .contact-content div {
-  border: 1px solid yellow;
   padding: 2%;
 }
 .contact-content h3 {
@@ -339,4 +334,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 5%;
+  background: salmon;
+  color: white;
+  border: none;
 }
