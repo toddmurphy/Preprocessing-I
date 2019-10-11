@@ -4,56 +4,403 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} /* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
-html, body {
-    height: 100%;
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  font-family: @main-font;
+  line-height: 1.2;
 }
 
+// ***** GLOBAL FONTS *****//
+// GLOBAL FONT FAMILY
+@main-font: 'Roboto', sans-serif;
+
+// Global font variables
+// MixIns for font sizes
+.extra-large-header() {
+  font-size: 4.8rem; /*48px*/
+}
+
+.large-header() {
+  font-size: 3.6rem; /*36px*/
+}
+
+.medium-header() {
+  font-size: 2.4rem; /*24px*/
+}
+
+.small-header() {
+  font-size: 2rem; /*20px*/
+}
+
+.default-size() {
+  font-size: 1.6rem; /*16px*/
+}
+
+.default-button() {
+  width: 200px;
+  height: 50px;
+  background: salmon;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 0 2%;
+  .default-size();
+}
+
+.box-shadow() {
+  box-shadow: 1px 4px 10px #888888;
+}
+
+// Global background light grey
+.backround-grey() {
+  background: #e9ecef;
+}
+
+// Gloabl Font Sizes
+h1 {
+  .extra-large-header();
+}
+
+h2 {
+  .large-header();
+}
+
+h3 {
+  .medium-header();
+}
+
+h4 {
+  .small-header();
+}
+
+p {
+  .default-size();
+}
+
+a {
+  .default-size();
+}
+
+button {
+  .default-button();
+}
+
+// HEADER SECTION STYLES
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2% 0;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  } //this closes the header 500px media
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } //This closes media nav
+  } //This closes the nav
+
+  a {
+    text-decoration: none;
+    margin: 0 5%;
+
+    @media (max-width: 500px) {
+      padding: 5% 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      width: 100%;
+    } //This close media anchor
+  } // This closes the links
+} //This closes the header
+
+// HERO CONTENT SECTION STYLES
+.hero-content {
+  display: flex;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  } //This closes hero content
+
+  div {
+    width: 50%;
+    padding: 5%;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    } //This closes media div
+  } //This closes div
+
+  img {
+    border-radius: 50%;
+  } //This closes img
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  h1 {
+    padding: 5% 0;
+  } //This closes h1
+
+  h3 {
+    padding: 5% 0;
+  } //This closes h3
+
+  h4 {
+    padding: 5% 0;
+    margin-bottom: 5%;
+  } //This closes h4
+} // This closes the hero content
+
+// SKILLS CONTENT SECTION STYLES
+.skills-content {
+  display: flex;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  } //This closes skill content
+
+  div {
+    padding: 2% 2%;
+    margin: 5% 5%;
+    border-radius: 5px;
+    .backround-grey();
+    .box-shadow();
+  } //This closes the section div
+
+  h3 {
+    padding: 2% 0;
+  } //This closes the skills h3 tag
+} //This closes the skills content
+
+// WORK CONTENT SECTION STYLES
+.work-content {
+  display: flex;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  } //This closes the work content
+
+  div {
+    width: 40%;
+    padding: 5% 5%;
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      border-top: 1px dashed grey;
+      border-bottom: 1px dashed grey;
+    } //This closes div
+  } //This closes the work content div
+
+  h4 {
+    margin-bottom: 5%;
+  } //This closes the work content h4
+
+  p {
+    padding: 2%;
+  } //This closes the work content p
+} //This closes the work content section
+
+// EDUCATION CONTENT SECTION STYLES
+.education-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  } //This closes the education content media
+
+  h4 {
+    padding: 6% 2%;
+  } //This closes the h4
+} //This closes the education content
+
+// CONTACT CONTENT SECTION STYLES
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 5%;
+
+  div {
+    padding: 2%;
+  } //This closes the div
+
+  h3 {
+    padding: 2%;
+  } //This closes the h3
+
+  p {
+    margin: 5% 5%;
+  } //This closes the p
+} //This closes the contact content
+
+// FOOTER SECTION STYLES
+footer {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  background: salmon;
+  color: white;
+  border: none;
+} //This closes the footer
